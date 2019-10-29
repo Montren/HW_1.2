@@ -16,6 +16,8 @@ repositories {
 dependencies {
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter
     testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter', version: '5.6.0-M1'
+    // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-params
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-params', version: '5.6.0-M1'
 }
 
 test{

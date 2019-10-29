@@ -1,6 +1,8 @@
 package ru.netology.service;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -27,4 +29,18 @@ class CashbackHackServiceTest {
 
         assertEquals(expected, actual);
     }
+
+    @ParameterizedTest
+    @CsvFileSource(resources = "/TryParametrizedTestData.csv", numLinesToSkip = 1)
+    void ParametrizedAmountLower1000(int amount, int expected) {
+        CashbackHackService cashbackHackService = new CashbackHackService();
+
+
+        int actual = cashbackHackService.remain(amount);
+
+
+        assertEquals(expected, actual);
+    }
+
+
 }
